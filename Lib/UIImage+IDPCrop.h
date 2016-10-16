@@ -1,5 +1,5 @@
 //
-//  UIImage+PECrop.h
+//  UIImage+IDPCrop.h
 //  PhotoCropEditor
 //
 //  Created by Ernesto Rivera on 2013/07/29.

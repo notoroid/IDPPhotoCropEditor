@@ -1,5 +1,5 @@
 //
-//  PECropViewController.h
+//  IDPCropViewController.h
 //  PhotoCropEditor
 //
 //  Created by kishikawa katsumi on 2013/05/19.
@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol PECropViewControllerDelegate;
+@protocol IDPCropViewControllerDelegate;
 
-@interface PECropViewController : UIViewController
+@interface IDPCropViewController : UIViewController
 
-@property (nonatomic, weak) id<PECropViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<IDPCropViewControllerDelegate> delegate;
 @property (nonatomic) UIImage *image;
 
 @property (nonatomic) BOOL keepingCropAspectRatio;
@@ -35,10 +35,10 @@
 
 @end
 
-@protocol PECropViewControllerDelegate <NSObject>
+@protocol IDPCropViewControllerDelegate <NSObject>
 @optional
-- (void)cropViewController:(PECropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage;
-- (void)cropViewController:(PECropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage transform:(CGAffineTransform)transform cropRect:(CGRect)cropRect;
-- (void)cropViewControllerDidCancel:(PECropViewController *)controller;
+- (void)cropViewController:(IDPCropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage;
+- (void)cropViewController:(IDPCropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage transform:(CGAffineTransform)transform cropRect:(CGRect)cropRect;
+- (void)cropViewControllerDidCancel:(IDPCropViewController *)controller;
 
 @end

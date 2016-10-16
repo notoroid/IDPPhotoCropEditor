@@ -1,21 +1,21 @@
 //
-//  PEResizeControl.m
+//  IDPResizeControl.m
 //  PhotoCropEditor
 //
 //  Created by kishikawa katsumi on 2013/05/19.
 //  Copyright (c) 2013 kishikawa katsumi. All rights reserved.
 //
 
-#import "PEResizeControl.h"
+#import "IDPResizeControl.h"
 
-@interface PEResizeControl ()
+@interface IDPResizeControl ()
 
 @property (nonatomic, readwrite) CGPoint translation;
 @property (nonatomic) CGPoint startPoint;
 
 @end
 
-@implementation PEResizeControl
+@implementation IDPResizeControl
 
 - (id)initWithFrame:(CGRect)frame
 {

@@ -1,27 +1,27 @@
 //
-//  PECropView.m
+//  IDPCropView.m
 //  PhotoCropEditor
 //
 //  Created by kishikawa katsumi on 2013/05/19.
 //  Copyright (c) 2013 kishikawa katsumi. All rights reserved.
 //
 
-#import "PECropView.h"
-#import "PECropRectView.h"
-#import "UIImage+PECrop.h"
+#import "IDPCropView.h"
+#import "IDPCropRectView.h"
+#import "UIImage+IDPCrop.h"
 
 static const CGFloat MarginTop = 37.0f;
 //static const CGFloat MarginBottom = MarginTop;
 static const CGFloat MarginLeft = 20.0f;
 //static const CGFloat MarginRight = MarginLeft;
 
-@interface PECropView () <UIScrollViewDelegate, UIGestureRecognizerDelegate, PECropRectViewDelegate>
+@interface IDPCropView () <UIScrollViewDelegate, UIGestureRecognizerDelegate, IDPCropRectViewDelegate>
 
 @property (nonatomic) UIScrollView *scrollView;
 @property (nonatomic) UIView *zoomingView;
 @property (nonatomic) UIImageView *imageView;
 
-@property (nonatomic) PECropRectView *cropRectView;
+@property (nonatomic) IDPCropRectView *cropRectView;
 @property (nonatomic) UIView *topOverlayView;
 @property (nonatomic) UIView *leftOverlayView;
 @property (nonatomic) UIView *rightOverlayView;
@@ -35,7 +35,7 @@ static const CGFloat MarginLeft = 20.0f;
 
 @end
 
-@implementation PECropView
+@implementation IDPCropView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -79,7 +79,7 @@ static const CGFloat MarginLeft = 20.0f;
     _rotationGestureRecognizer = rotationGestureRecognizer;
     [self.scrollView addGestureRecognizer:rotationGestureRecognizer];
     
-    self.cropRectView = [[PECropRectView alloc] init];
+    self.cropRectView = [[IDPCropRectView alloc] init];
     self.cropRectView.delegate = self;
     [self addSubview:self.cropRectView];
     
@@ -377,7 +377,7 @@ static const CGFloat MarginLeft = 20.0f;
     self.rotationAngle = rotationAngle;
 }
 
-- (CGRect)cappedCropRectInImageRectWithCropRectView:(PECropRectView *)cropRectView
+- (CGRect)cappedCropRectInImageRectWithCropRectView:(IDPCropRectView *)cropRectView
 {
     CGRect cropRect = cropRectView.frame;
     
@@ -422,12 +422,12 @@ static const CGFloat MarginLeft = 20.0f;
 
 #pragma mark -
 
-- (void)cropRectViewDidBeginEditing:(PECropRectView *)cropRectView
+- (void)cropRectViewDidBeginEditing:(IDPCropRectView *)cropRectView
 {
     self.resizing = YES;
 }
 
-- (void)cropRectViewEditingChanged:(PECropRectView *)cropRectView
+- (void)cropRectViewEditingChanged:(IDPCropRectView *)cropRectView
 {
     CGRect cropRect = [self cappedCropRectInImageRectWithCropRectView:cropRectView];
     
@@ -436,7 +436,7 @@ static const CGFloat MarginLeft = 20.0f;
     [self automaticZoomIfEdgeTouched:cropRect];
 }
 
-- (void)cropRectViewDidEndEditing:(PECropRectView *)cropRectView
+- (void)cropRectViewDidEndEditing:(IDPCropRectView *)cropRectView
 {
     self.resizing = NO;
     [self zoomToCropRect:self.cropRectView.frame];

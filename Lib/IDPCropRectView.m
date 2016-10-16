@@ -1,31 +1,31 @@
 //
-//  PECropRectView.m
+//  IDPCropRectView.m
 //  PhotoCropEditor
 //
 //  Created by kishikawa katsumi on 2013/05/21.
 //  Copyright (c) 2013 kishikawa katsumi. All rights reserved.
 //
 
-#import "PECropRectView.h"
-#import "PEResizeControl.h"
+#import "IDPCropRectView.h"
+#import "IDPResizeControl.h"
 
-@interface PECropRectView ()<PEResizeControlViewDelegate>
+@interface IDPCropRectView ()<IDPResizeControlViewDelegate>
 
-@property (nonatomic) PEResizeControl *topLeftCornerView;
-@property (nonatomic) PEResizeControl *topRightCornerView;
-@property (nonatomic) PEResizeControl *bottomLeftCornerView;
-@property (nonatomic) PEResizeControl *bottomRightCornerView;
-@property (nonatomic) PEResizeControl *topEdgeView;
-@property (nonatomic) PEResizeControl *leftEdgeView;
-@property (nonatomic) PEResizeControl *bottomEdgeView;
-@property (nonatomic) PEResizeControl *rightEdgeView;
+@property (nonatomic) IDPResizeControl *topLeftCornerView;
+@property (nonatomic) IDPResizeControl *topRightCornerView;
+@property (nonatomic) IDPResizeControl *bottomLeftCornerView;
+@property (nonatomic) IDPResizeControl *bottomRightCornerView;
+@property (nonatomic) IDPResizeControl *topEdgeView;
+@property (nonatomic) IDPResizeControl *leftEdgeView;
+@property (nonatomic) IDPResizeControl *bottomEdgeView;
+@property (nonatomic) IDPResizeControl *rightEdgeView;
 
 @property (nonatomic) CGRect initialRect;
 @property (nonatomic) CGFloat fixedAspectRatio;
 
 @end
 
-@implementation PECropRectView
+@implementation IDPCropRectView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -42,35 +42,35 @@
         imageView.image = [[UIImage imageNamed:@"PEPhotoCropEditor.bundle/PEPhotoCropEditorBorder"] resizableImageWithCapInsets:UIEdgeInsetsMake(23.0f, 23.0f, 23.0f, 23.0f)];
         [self addSubview:imageView];
         
-        self.topLeftCornerView = [[PEResizeControl alloc] init];
+        self.topLeftCornerView = [[IDPResizeControl alloc] init];
         self.topLeftCornerView.delegate = self;
         [self addSubview:self.topLeftCornerView];
         
-        self.topRightCornerView = [[PEResizeControl alloc] init];
+        self.topRightCornerView = [[IDPResizeControl alloc] init];
         self.topRightCornerView.delegate = self;
         [self addSubview:self.topRightCornerView];
         
-        self.bottomLeftCornerView = [[PEResizeControl alloc] init];
+        self.bottomLeftCornerView = [[IDPResizeControl alloc] init];
         self.bottomLeftCornerView.delegate = self;
         [self addSubview:self.bottomLeftCornerView];
         
-        self.bottomRightCornerView = [[PEResizeControl alloc] init];
+        self.bottomRightCornerView = [[IDPResizeControl alloc] init];
         self.bottomRightCornerView.delegate = self;
         [self addSubview:self.bottomRightCornerView];
         
-        self.topEdgeView = [[PEResizeControl alloc] init];
+        self.topEdgeView = [[IDPResizeControl alloc] init];
         self.topEdgeView.delegate = self;
         [self addSubview:self.topEdgeView];
         
-        self.leftEdgeView = [[PEResizeControl alloc] init];
+        self.leftEdgeView = [[IDPResizeControl alloc] init];
         self.leftEdgeView.delegate = self;
         [self addSubview:self.leftEdgeView];
         
-        self.bottomEdgeView = [[PEResizeControl alloc] init];
+        self.bottomEdgeView = [[IDPResizeControl alloc] init];
         self.bottomEdgeView.delegate = self;
         [self addSubview:self.bottomEdgeView];
         
-        self.rightEdgeView = [[PEResizeControl alloc] init];
+        self.rightEdgeView = [[IDPResizeControl alloc] init];
         self.rightEdgeView.delegate = self;
         [self addSubview:self.rightEdgeView];
     }
@@ -84,7 +84,7 @@
 {
     NSArray *subviews = self.subviews;
     for (UIView *subview in subviews) {
-        if ([subview isKindOfClass:[PEResizeControl class]]) {
+        if ([subview isKindOfClass:[IDPResizeControl class]]) {
             if (CGRectContainsPoint(subview.frame, point)) {
                 return subview;
             }
@@ -165,7 +165,7 @@
 
 #pragma mark -
 
-- (void)resizeControlViewDidBeginResizing:(PEResizeControl *)resizeControlView
+- (void)resizeControlViewDidBeginResizing:(IDPResizeControl *)resizeControlView
 {
     self.initialRect = self.frame;
     
@@ -174,7 +174,7 @@
     }
 }
 
-- (void)resizeControlViewDidResize:(PEResizeControl *)resizeControlView
+- (void)resizeControlViewDidResize:(IDPResizeControl *)resizeControlView
 {
     self.frame = [self cropRectMakeWithResizeControlView:resizeControlView];
         
@@ -183,14 +183,14 @@
     }
 }
 
-- (void)resizeControlViewDidEndResizing:(PEResizeControl *)resizeControlView
+- (void)resizeControlViewDidEndResizing:(IDPResizeControl *)resizeControlView
 {
     if ([self.delegate respondsToSelector:@selector(cropRectViewDidEndEditing:)]) {
         [self.delegate cropRectViewDidEndEditing:self];
     }
 }
 
-- (CGRect)cropRectMakeWithResizeControlView:(PEResizeControl *)resizeControlView
+- (CGRect)cropRectMakeWithResizeControlView:(IDPResizeControl *)resizeControlView
 {
     CGRect rect = self.frame;
     

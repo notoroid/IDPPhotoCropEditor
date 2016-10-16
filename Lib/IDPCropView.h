@@ -1,5 +1,5 @@
 //
-//  PECropView.h
+//  IDPCropView.h
 //  PhotoCropEditor
 //
 //  Created by kishikawa katsumi on 2013/05/19.
@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface PECropView : UIView
+@interface IDPCropView : UIView
 
 @property (nonatomic) UIImage *image;
 @property (nonatomic, readonly) UIImage *croppedImage;

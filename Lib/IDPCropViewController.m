@@ -1,24 +1,24 @@
 //
-//  PECropViewController.m
+//  IDPCropViewController.m
 //  PhotoCropEditor
 //
 //  Created by kishikawa katsumi on 2013/05/19.
 //  Copyright (c) 2013 kishikawa katsumi. All rights reserved.
 //
 
-#import "PECropViewController.h"
-#import "PECropView.h"
+#import "IDPCropViewController.h"
+#import "IDPCropView.h"
 
-@interface PECropViewController () <UIActionSheetDelegate>
+@interface IDPCropViewController () <UIActionSheetDelegate>
 
-@property (nonatomic) PECropView *cropView;
+@property (nonatomic) IDPCropView *cropView;
 @property (nonatomic) UIActionSheet *actionSheet;
 
 - (void)commonInit;
 
 @end
 
-@implementation PECropViewController
+@implementation IDPCropViewController
 @synthesize rotationEnabled = _rotationEnabled;
 
 + (NSBundle *)bundle
@@ -35,7 +35,7 @@
 
 static inline NSString *PELocalizedString(NSString *key, NSString *comment)
 {
-    return [[PECropViewController bundle] localizedStringForKey:key value:nil table:@"Localizable"];
+    return [[IDPCropViewController bundle] localizedStringForKey:key value:nil table:@"Localizable"];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
@@ -72,7 +72,7 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
     contentView.backgroundColor = [UIColor blackColor];
     self.view = contentView;
     
-    self.cropView = [[PECropView alloc] initWithFrame:contentView.bounds];
+    self.cropView = [[IDPCropView alloc] initWithFrame:contentView.bounds];
     [contentView addSubview:self.cropView];
 }
 

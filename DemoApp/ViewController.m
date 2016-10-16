@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "PECropViewController.h"
+#import "IDPCropViewController.h"
 
-@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, PECropViewControllerDelegate>
+@interface ViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, IDPCropViewControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *editButton;
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
@@ -38,9 +38,9 @@
     return YES;
 }
 
-#pragma mark - PECropViewControllerDelegate methods
+#pragma mark - IDPCropViewControllerDelegate methods
 
-- (void)cropViewController:(PECropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage transform:(CGAffineTransform)transform cropRect:(CGRect)cropRect
+- (void)cropViewController:(IDPCropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage transform:(CGAffineTransform)transform cropRect:(CGRect)cropRect
 {
     [controller dismissViewControllerAnimated:YES completion:NULL];
     self.imageView.image = croppedImage;
@@ -49,7 +49,7 @@
     }
 }
 
-- (void)cropViewControllerDidCancel:(PECropViewController *)controller
+- (void)cropViewControllerDidCancel:(IDPCropViewController *)controller
 {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         [self updateEditButtonEnabled];
@@ -62,7 +62,7 @@
 
 - (IBAction)openEditor:(id)sender
 {
-    PECropViewController *controller = [[PECropViewController alloc] init];
+    IDPCropViewController *controller = [[IDPCropViewController alloc] init];
     controller.delegate = self;
     controller.image = self.imageView.image;
     
@@ -170,7 +170,7 @@
 #pragma mark - UIImagePickerControllerDelegate methods
 
 /*
- Open PECropViewController automattically when image selected.
+ Open IDPCropViewController automattically when image selected.
  */
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {

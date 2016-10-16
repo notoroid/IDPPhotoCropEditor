@@ -1,12 +1,12 @@
 //
-//  UIImage+PECrop.m
+//  UIImage+IDPCrop.m
 //  PhotoCropEditor
 //
 //  Created by Ernesto Rivera on 2013/07/29.
 //  Copyright (c) 2013 kishikawa katsumi. All rights reserved.
 //
 
-#import "UIImage+PECrop.h"
+#import "UIImage+IDPCrop.h"
 
 @implementation UIImage (PECrop)
 
