@@ -461,72 +461,6 @@ CGFloat radiansToDegrees3(CGFloat radians) {return radians * 180 / M_PI;};
 
 - (NSDictionary*) cropData
 {
-//    NSLog(@"self.zoomingView.center=%@",[NSValue valueWithCGPoint:self.zoomingView.center]);
-//    
-//    CGRect maskRect = [self convertRect:self.scrollView.frame toView:self.zoomingView];
-//
-//    CGFloat scaleX = _maskRect.size.width / maskRect.size.width;
-//    CGFloat scaleY = _maskRect.size.height / maskRect.size.height;
-//    
-//    CGRect imageBounds = self.imageView.bounds;
-//    
-//    UIBezierPath* rectanglePath = nil;
-//    rectanglePath = [UIBezierPath bezierPathWithRect:CGRectMake(.0f,.0f, imageBounds.size.width, imageBounds.size.height)];
-//
-//    [rectanglePath applyTransform:self.rotation];
-//    NSLog(@"rectanglePath.bounds=%@",[NSValue valueWithCGRect:rectanglePath.bounds]);
-//
-//    [rectanglePath applyTransform:CGAffineTransformMakeScale(scaleX, scaleY)];
-//    NSLog(@"rectanglePath.bounds=%@",[NSValue valueWithCGRect:rectanglePath.bounds]);
-//    
-//    CGRect imageBoundsForTranslation = CGRectMake(imageBounds.origin.x * scaleX,imageBounds.origin.y * scaleY,imageBounds.size.width * scaleX,imageBounds.size.height * scaleY);
-//    [rectanglePath applyTransform:CGAffineTransformMakeTranslation(
-//                       - (CGRectGetMidX(rectanglePath.bounds) - CGRectGetMidX(imageBoundsForTranslation))
-//                       ,- (CGRectGetMidY(rectanglePath.bounds) - CGRectGetMidY(imageBoundsForTranslation))) ];
-//    NSLog(@"rectanglePath.bounds=%@",[NSValue valueWithCGRect:rectanglePath.bounds]);
-//    
-//    
-//    CGPathRef cgPath = rectanglePath.CGPath;
-//        // CGパスを取得
-//    
-//    // 回転角度に応じて取得先インデックスを変更
-//    CGFloat rotationRadian = atan2f(self.rotation.b, self.rotation.a);
-//    CGFloat rotationDegree = radiansToDegrees3(rotationRadian);
-//    double normalizedRotate = rotationDegree - ( ((int)rotationDegree / 360) * 360 );
-//    if (normalizedRotate < .0f)
-//        normalizedRotate += 360;
-//    
-//    NSMutableArray* points = [NSMutableArray array];
-//    CGPathApply(cgPath, (__bridge void*)points , IDPCropView_path_walker);
-//    
-//    NSInteger firstPointIndex = 0;
-//    if( normalizedRotate != .0f ){
-//        if( normalizedRotate == 90 ){
-//            firstPointIndex = 1;
-//        }else if( normalizedRotate == 180 ){
-//            firstPointIndex = 2;
-//        }else if( normalizedRotate == 270 ){
-//            firstPointIndex = 3;
-//        }
-//    }
-//    CGPoint firstPoint = [points[firstPointIndex] CGPointValue];
-//        // firstPoint は中心回転時の左端位置
-//    
-//    CGAffineTransform savedTransForm = self.imageView.transform;
-//    self.imageView.transform = CGAffineTransformIdentity;
-//    CGRect frameImageView = self.imageView.frame;
-//    self.imageView.transform = savedTransForm;
-//    
-//    CGPoint leftTop = CGPointMake( frameImageView.origin.x
-//                                  ,frameImageView.origin.y );
-//    
-//    
-//    CGPoint pointCropOffset = CGPointMake( firstPoint.x + leftTop.x * scaleX - maskRect.origin.x * scaleX + _maskRect.origin.x
-//                                          ,firstPoint.y + leftTop.y * scaleX - maskRect.origin.y * scaleX + _maskRect.origin.y
-//                                          );
-
-    
-    
     CGRect zoomedCropRect = self.zoomedCropRect;
 
 
@@ -731,15 +665,6 @@ CGFloat radiansToDegrees3(CGFloat radians) {return radians * 180 / M_PI;};
     [self setRotationAngle:rotationAngle withNormalizeZoomByRotate:YES];
 }
 
-//- (void)setRotationAngle:(CGFloat)rotationAngle snap:(BOOL)snap
-//{
-//    if (snap)
-//    {
-//        rotationAngle = nearbyintf(rotationAngle / M_PI_2) * M_PI_2;
-//    }
-//    self.rotationAngle = rotationAngle;
-//}
-
 - (void) resetRotationControl
 {
     self.cropRectView.horizontalRatio = 1.0f;
@@ -783,10 +708,6 @@ CGFloat radiansToDegrees3(CGFloat radians) {return radians * 180 / M_PI;};
 - (void)cropRectViewDidBeginEditing:(IDPCropRectView *)cropRectView
 {
     self.resizing = YES;
-    
-//    CGFloat degree = radiansToDegrees3(self.rotationAngle);
-        // 度数に変換
-//    self.baseDegree = ((int)degree / 90) * 90.0f;
 }
 
 - (void)cropRectViewEditingChanged:(IDPCropRectView *)cropRectView
@@ -831,9 +752,6 @@ CGFloat radiansToDegrees3(CGFloat radians) {return radians * 180 / M_PI;};
 - (void) normalizeZoomByRotate
 {
     CGRect maskRect = [self convertRect:self.scrollView.frame toView:self.zoomingView];
-    //    CGRect originalRect = self.imageView.bounds;
-    //    CGPoint originalOffset = CGPointMake( (originalRect.size.width - maskRect.size.width) * .5f
-    //                                         ,(originalRect.size.height - maskRect.size.height) * .5f );
     
 #define MASK_HITTEST_STEP .00125f;
     
@@ -935,15 +853,12 @@ CGFloat radiansToDegrees3(CGFloat radians) {return radians * 180 / M_PI;};
 - (void)cropRectViewDidEndEditing:(IDPCropRectView *)cropRectView
 {
     self.resizing = NO;
-//    [self zoomToCropRect:self.cropRectView.frame toFill:NO];
 
     CGRect bounds = cropRectView.bounds;
     cropRectView.horizontalRatio = bounds.size.width / self.scrollView.bounds.size.width;
     cropRectView.verticalRatio = bounds.size.height / self.scrollView.bounds.size.height;
     
 //    NSLog(@"cropRectView.verticalRatio=%@", @(cropRectView.verticalRatio) );
-    
-//    [self layoutCropRectViewWithCropRect:self.scrollView.bounds ];
 }
 
 - (void)zoomToCropRect:(CGRect)toRect toFill:(BOOL)toFill force:(BOOL)force centeringStatus:(IDPCropViewCenteringStatus)centeringStatus
