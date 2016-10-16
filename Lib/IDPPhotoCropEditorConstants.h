@@ -5,6 +5,8 @@
 //  Copyright (c) 2013 Irimasu Densan Planning. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 #ifndef IDPPhotoCropEditorConstants_h
 #define IDPPhotoCropEditorConstants_h
 

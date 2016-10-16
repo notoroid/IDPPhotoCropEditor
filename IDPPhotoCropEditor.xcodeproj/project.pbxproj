@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87A5F0C41DB435AA00812E0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F0C31DB435AA00812E0F /* main.m */; };
+		87A5F0C71DB435AA00812E0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F0C61DB435AA00812E0F /* AppDelegate.m */; };
+		87A5F0CA1DB435AA00812E0F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F0C91DB435AA00812E0F /* ViewController.m */; };
+		87A5F0CD1DB435AA00812E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A5F0CB1DB435AA00812E0F /* Main.storyboard */; };
+		87A5F0CF1DB435AB00812E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A5F0CE1DB435AB00812E0F /* Assets.xcassets */; };
+		87A5F0D21DB435AB00812E0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A5F0D01DB435AB00812E0F /* LaunchScreen.storyboard */; };
+		87A5F0DD1DB435AB00812E0F /* IDPPhotoCropEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F0DC1DB435AB00812E0F /* IDPPhotoCropEditorTests.m */; };
+		87A5F0E81DB435AB00812E0F /* IDPPhotoCropEditorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F0E71DB435AB00812E0F /* IDPPhotoCropEditorUITests.m */; };
+		87A5F1051DB4360400812E0F /* IDPCropFigureRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F0F71DB4360400812E0F /* IDPCropFigureRenderer.m */; };
+		87A5F1061DB4360400812E0F /* IDPCropRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F0F91DB4360400812E0F /* IDPCropRectView.m */; };
+		87A5F1071DB4360400812E0F /* IDPCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F0FB1DB4360400812E0F /* IDPCropView.m */; };
+		87A5F1081DB4360400812E0F /* IDPCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F0FD1DB4360400812E0F /* IDPCropViewController.m */; };
+		87A5F1091DB4360400812E0F /* IDPResizeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F1001DB4360400812E0F /* IDPResizeControl.m */; };
+		87A5F10A1DB4360400812E0F /* IDPTrackerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F1021DB4360400812E0F /* IDPTrackerView.m */; };
+		87A5F10B1DB4360400812E0F /* UIImage+IDPCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A5F1041DB4360400812E0F /* UIImage+IDPCrop.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87A5F0D91DB435AB00812E0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87A5F0B71DB435AA00812E0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87A5F0BE1DB435AA00812E0F;
+			remoteInfo = IDPPhotoCropEditor;
+		};
+		87A5F0E41DB435AB00812E0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87A5F0B71DB435AA00812E0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87A5F0BE1DB435AA00812E0F;
+			remoteInfo = IDPPhotoCropEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87A5F0BF1DB435AA00812E0F /* IDPPhotoCropEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDPPhotoCropEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A5F0C31DB435AA00812E0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87A5F0C51DB435AA00812E0F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		87A5F0C61DB435AA00812E0F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		87A5F0C81DB435AA00812E0F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		87A5F0C91DB435AA00812E0F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		87A5F0CC1DB435AA00812E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87A5F0CE1DB435AB00812E0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87A5F0D11DB435AB00812E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87A5F0D31DB435AB00812E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A5F0D81DB435AB00812E0F /* IDPPhotoCropEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IDPPhotoCropEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A5F0DC1DB435AB00812E0F /* IDPPhotoCropEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDPPhotoCropEditorTests.m; sourceTree = "<group>"; };
+		87A5F0DE1DB435AB00812E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A5F0E31DB435AB00812E0F /* IDPPhotoCropEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IDPPhotoCropEditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A5F0E71DB435AB00812E0F /* IDPPhotoCropEditorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDPPhotoCropEditorUITests.m; sourceTree = "<group>"; };
+		87A5F0E91DB435AB00812E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A5F0F61DB4360400812E0F /* IDPCropFigureRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPCropFigureRenderer.h; sourceTree = "<group>"; };
+		87A5F0F71DB4360400812E0F /* IDPCropFigureRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPCropFigureRenderer.m; sourceTree = "<group>"; };
+		87A5F0F81DB4360400812E0F /* IDPCropRectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPCropRectView.h; sourceTree = "<group>"; };
+		87A5F0F91DB4360400812E0F /* IDPCropRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPCropRectView.m; sourceTree = "<group>"; };
+		87A5F0FA1DB4360400812E0F /* IDPCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPCropView.h; sourceTree = "<group>"; };
+		87A5F0FB1DB4360400812E0F /* IDPCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPCropView.m; sourceTree = "<group>"; };
+		87A5F0FC1DB4360400812E0F /* IDPCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPCropViewController.h; sourceTree = "<group>"; };
+		87A5F0FD1DB4360400812E0F /* IDPCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPCropViewController.m; sourceTree = "<group>"; };
+		87A5F0FE1DB4360400812E0F /* IDPPhotoCropEditorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPPhotoCropEditorConstants.h; sourceTree = "<group>"; };
+		87A5F0FF1DB4360400812E0F /* IDPResizeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPResizeControl.h; sourceTree = "<group>"; };
+		87A5F1001DB4360400812E0F /* IDPResizeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPResizeControl.m; sourceTree = "<group>"; };
+		87A5F1011DB4360400812E0F /* IDPTrackerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPTrackerView.h; sourceTree = "<group>"; };
+		87A5F1021DB4360400812E0F /* IDPTrackerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPTrackerView.m; sourceTree = "<group>"; };
+		87A5F1031DB4360400812E0F /* UIImage+IDPCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+IDPCrop.h"; sourceTree = "<group>"; };
+		87A5F1041DB4360400812E0F /* UIImage+IDPCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+IDPCrop.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87A5F0BC1DB435AA00812E0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A5F0D51DB435AB00812E0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A5F0E01DB435AB00812E0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87A5F0B61DB435AA00812E0F = {
+			isa = PBXGroup;
+			children = (
+				87A5F0F51DB4360400812E0F /* Lib */,
+				87A5F0C11DB435AA00812E0F /* IDPPhotoCropEditor */,
+				87A5F0DB1DB435AB00812E0F /* IDPPhotoCropEditorTests */,
+				87A5F0E61DB435AB00812E0F /* IDPPhotoCropEditorUITests */,
+				87A5F0C01DB435AA00812E0F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87A5F0C01DB435AA00812E0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87A5F0BF1DB435AA00812E0F /* IDPPhotoCropEditor.app */,
+				87A5F0D81DB435AB00812E0F /* IDPPhotoCropEditorTests.xctest */,
+				87A5F0E31DB435AB00812E0F /* IDPPhotoCropEditorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87A5F0C11DB435AA00812E0F /* IDPPhotoCropEditor */ = {
+			isa = PBXGroup;
+			children = (
+				87A5F0C51DB435AA00812E0F /* AppDelegate.h */,
+				87A5F0C61DB435AA00812E0F /* AppDelegate.m */,
+				87A5F0C81DB435AA00812E0F /* ViewController.h */,
+				87A5F0C91DB435AA00812E0F /* ViewController.m */,
+				87A5F0CB1DB435AA00812E0F /* Main.storyboard */,
+				87A5F0CE1DB435AB00812E0F /* Assets.xcassets */,
+				87A5F0D01DB435AB00812E0F /* LaunchScreen.storyboard */,
+				87A5F0D31DB435AB00812E0F /* Info.plist */,
+				87A5F0C21DB435AA00812E0F /* Supporting Files */,
+			);
+			path = IDPPhotoCropEditor;
+			sourceTree = "<group>";
+		};
+		87A5F0C21DB435AA00812E0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87A5F0C31DB435AA00812E0F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		87A5F0DB1DB435AB00812E0F /* IDPPhotoCropEditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				87A5F0DC1DB435AB00812E0F /* IDPPhotoCropEditorTests.m */,
+				87A5F0DE1DB435AB00812E0F /* Info.plist */,
+			);
+			path = IDPPhotoCropEditorTests;
+			sourceTree = "<group>";
+		};
+		87A5F0E61DB435AB00812E0F /* IDPPhotoCropEditorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87A5F0E71DB435AB00812E0F /* IDPPhotoCropEditorUITests.m */,
+				87A5F0E91DB435AB00812E0F /* Info.plist */,
+			);
+			path = IDPPhotoCropEditorUITests;
+			sourceTree = "<group>";
+		};
+		87A5F0F51DB4360400812E0F /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				87A5F0FE1DB4360400812E0F /* IDPPhotoCropEditorConstants.h */,
+				87A5F0F61DB4360400812E0F /* IDPCropFigureRenderer.h */,
+				87A5F0F71DB4360400812E0F /* IDPCropFigureRenderer.m */,
+				87A5F0F81DB4360400812E0F /* IDPCropRectView.h */,
+				87A5F0F91DB4360400812E0F /* IDPCropRectView.m */,
+				87A5F0FB1DB4360400812E0F /* IDPCropView.m */,
+				87A5F0FC1DB4360400812E0F /* IDPCropViewController.h */,
+				87A5F0FD1DB4360400812E0F /* IDPCropViewController.m */,
+				87A5F0FA1DB4360400812E0F /* IDPCropView.h */,
+				87A5F0FF1DB4360400812E0F /* IDPResizeControl.h */,
+				87A5F1001DB4360400812E0F /* IDPResizeControl.m */,
+				87A5F1011DB4360400812E0F /* IDPTrackerView.h */,
+				87A5F1021DB4360400812E0F /* IDPTrackerView.m */,
+				87A5F1031DB4360400812E0F /* UIImage+IDPCrop.h */,
+				87A5F1041DB4360400812E0F /* UIImage+IDPCrop.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87A5F0BE1DB435AA00812E0F /* IDPPhotoCropEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87A5F0EC1DB435AB00812E0F /* Build configuration list for PBXNativeTarget "IDPPhotoCropEditor" */;
+			buildPhases = (
+				87A5F0BB1DB435AA00812E0F /* Sources */,
+				87A5F0BC1DB435AA00812E0F /* Frameworks */,
+				87A5F0BD1DB435AA00812E0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IDPPhotoCropEditor;
+			productName = IDPPhotoCropEditor;
+			productReference = 87A5F0BF1DB435AA00812E0F /* IDPPhotoCropEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87A5F0D71DB435AB00812E0F /* IDPPhotoCropEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87A5F0EF1DB435AB00812E0F /* Build configuration list for PBXNativeTarget "IDPPhotoCropEditorTests" */;
+			buildPhases = (
+				87A5F0D41DB435AB00812E0F /* Sources */,
+				87A5F0D51DB435AB00812E0F /* Frameworks */,
+				87A5F0D61DB435AB00812E0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87A5F0DA1DB435AB00812E0F /* PBXTargetDependency */,
+			);
+			name = IDPPhotoCropEditorTests;
+			productName = IDPPhotoCropEditorTests;
+			productReference = 87A5F0D81DB435AB00812E0F /* IDPPhotoCropEditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87A5F0E21DB435AB00812E0F /* IDPPhotoCropEditorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87A5F0F21DB435AB00812E0F /* Build configuration list for PBXNativeTarget "IDPPhotoCropEditorUITests" */;
+			buildPhases = (
+				87A5F0DF1DB435AB00812E0F /* Sources */,
+				87A5F0E01DB435AB00812E0F /* Frameworks */,
+				87A5F0E11DB435AB00812E0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87A5F0E51DB435AB00812E0F /* PBXTargetDependency */,
+			);
+			name = IDPPhotoCropEditorUITests;
+			productName = IDPPhotoCropEditorUITests;
+			productReference = 87A5F0E31DB435AB00812E0F /* IDPPhotoCropEditorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87A5F0B71DB435AA00812E0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Kaname Noto";
+				TargetAttributes = {
+					87A5F0BE1DB435AA00812E0F = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					87A5F0D71DB435AB00812E0F = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 87A5F0BE1DB435AA00812E0F;
+					};
+					87A5F0E21DB435AB00812E0F = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 87A5F0BE1DB435AA00812E0F;
+					};
+				};
+			};
+			buildConfigurationList = 87A5F0BA1DB435AA00812E0F /* Build configuration list for PBXProject "IDPPhotoCropEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87A5F0B61DB435AA00812E0F;
+			productRefGroup = 87A5F0C01DB435AA00812E0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87A5F0BE1DB435AA00812E0F /* IDPPhotoCropEditor */,
+				87A5F0D71DB435AB00812E0F /* IDPPhotoCropEditorTests */,
+				87A5F0E21DB435AB00812E0F /* IDPPhotoCropEditorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87A5F0BD1DB435AA00812E0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A5F0D21DB435AB00812E0F /* LaunchScreen.storyboard in Resources */,
+				87A5F0CF1DB435AB00812E0F /* Assets.xcassets in Resources */,
+				87A5F0CD1DB435AA00812E0F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A5F0D61DB435AB00812E0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A5F0E11DB435AB00812E0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87A5F0BB1DB435AA00812E0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A5F1071DB4360400812E0F /* IDPCropView.m in Sources */,
+				87A5F1051DB4360400812E0F /* IDPCropFigureRenderer.m in Sources */,
+				87A5F1081DB4360400812E0F /* IDPCropViewController.m in Sources */,
+				87A5F10A1DB4360400812E0F /* IDPTrackerView.m in Sources */,
+				87A5F0CA1DB435AA00812E0F /* ViewController.m in Sources */,
+				87A5F0C71DB435AA00812E0F /* AppDelegate.m in Sources */,
+				87A5F1091DB4360400812E0F /* IDPResizeControl.m in Sources */,
+				87A5F10B1DB4360400812E0F /* UIImage+IDPCrop.m in Sources */,
+				87A5F1061DB4360400812E0F /* IDPCropRectView.m in Sources */,
+				87A5F0C41DB435AA00812E0F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A5F0D41DB435AB00812E0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A5F0DD1DB435AB00812E0F /* IDPPhotoCropEditorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87A5F0DF1DB435AB00812E0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A5F0E81DB435AB00812E0F /* IDPPhotoCropEditorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87A5F0DA1DB435AB00812E0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87A5F0BE1DB435AA00812E0F /* IDPPhotoCropEditor */;
+			targetProxy = 87A5F0D91DB435AB00812E0F /* PBXContainerItemProxy */;
+		};
+		87A5F0E51DB435AB00812E0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87A5F0BE1DB435AA00812E0F /* IDPPhotoCropEditor */;
+			targetProxy = 87A5F0E41DB435AB00812E0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87A5F0CB1DB435AA00812E0F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87A5F0CC1DB435AA00812E0F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87A5F0D01DB435AB00812E0F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87A5F0D11DB435AB00812E0F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87A5F0EA1DB435AB00812E0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87A5F0EB1DB435AB00812E0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87A5F0ED1DB435AB00812E0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IDPPhotoCropEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.irimasu.IDPPhotoCropEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		87A5F0EE1DB435AB00812E0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IDPPhotoCropEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.irimasu.IDPPhotoCropEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		87A5F0F01DB435AB00812E0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IDPPhotoCropEditorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.irimasu.IDPPhotoCropEditorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IDPPhotoCropEditor.app/IDPPhotoCropEditor";
+			};
+			name = Debug;
+		};
+		87A5F0F11DB435AB00812E0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IDPPhotoCropEditorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.irimasu.IDPPhotoCropEditorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IDPPhotoCropEditor.app/IDPPhotoCropEditor";
+			};
+			name = Release;
+		};
+		87A5F0F31DB435AB00812E0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = IDPPhotoCropEditorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.irimasu.IDPPhotoCropEditorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IDPPhotoCropEditor;
+			};
+			name = Debug;
+		};
+		87A5F0F41DB435AB00812E0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = IDPPhotoCropEditorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.irimasu.IDPPhotoCropEditorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IDPPhotoCropEditor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87A5F0BA1DB435AA00812E0F /* Build configuration list for PBXProject "IDPPhotoCropEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A5F0EA1DB435AB00812E0F /* Debug */,
+				87A5F0EB1DB435AB00812E0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87A5F0EC1DB435AB00812E0F /* Build configuration list for PBXNativeTarget "IDPPhotoCropEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A5F0ED1DB435AB00812E0F /* Debug */,
+				87A5F0EE1DB435AB00812E0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87A5F0EF1DB435AB00812E0F /* Build configuration list for PBXNativeTarget "IDPPhotoCropEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A5F0F01DB435AB00812E0F /* Debug */,
+				87A5F0F11DB435AB00812E0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87A5F0F21DB435AB00812E0F /* Build configuration list for PBXNativeTarget "IDPPhotoCropEditorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A5F0F31DB435AB00812E0F /* Debug */,
+				87A5F0F41DB435AB00812E0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87A5F0B71DB435AA00812E0F /* Project object */;
+}

@@ -52,7 +52,7 @@
                 }
                 CGPoint offset = [sourceImage extent].origin;
                 sourceImage = [sourceImage imageByApplyingTransform:CGAffineTransformMakeTranslation(-offset.x,-offset.y)];
-                NSLog(@"[sourceImage extent]=%@",[NSValue valueWithCGRect:[sourceImage extent]]);
+//                NSLog(@"[sourceImage extent]=%@",[NSValue valueWithCGRect:[sourceImage extent]]);
             }
                 break;
             case UIImageOrientationRight:
@@ -64,7 +64,7 @@
                     }
                     CGPoint offset = [sourceImage extent].origin;
                     sourceImage = [sourceImage imageByApplyingTransform:CGAffineTransformMakeTranslation(-offset.x,-offset.y)];
-                    NSLog(@"[sourceImage extent]=%@",[NSValue valueWithCGRect:[sourceImage extent]]);
+//                    NSLog(@"[sourceImage extent]=%@",[NSValue valueWithCGRect:[sourceImage extent]]);
                 }
                 break;
             case UIImageOrientationLeft:

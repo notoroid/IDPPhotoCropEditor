@@ -417,7 +417,7 @@ CGFloat radiansToDegrees3(CGFloat radians) {return radians * 180 / M_PI;};
     
     UIBezierPath* rectanglePath = nil;
     rectanglePath = [UIBezierPath bezierPathWithRect:imageBounds];
-    NSLog(@"1) rectanglePath.bounds=%@",[NSValue valueWithCGRect:rectanglePath.bounds]);
+//    NSLog(@"1) rectanglePath.bounds=%@",[NSValue valueWithCGRect:rectanglePath.bounds]);
     
     [rectanglePath applyTransform:self.rotation];
     //    NSLog(@"rectanglePath.bounds=%@",[NSValue valueWithCGRect:rectanglePath.bounds]);
@@ -427,7 +427,7 @@ CGFloat radiansToDegrees3(CGFloat radians) {return radians * 180 / M_PI;};
     [rectanglePath applyTransform:CGAffineTransformMakeTranslation(
                                                                    translation.x
                                                                    ,translation.y ) ];
-    NSLog(@"2) rectanglePath.bounds=%@",[NSValue valueWithCGRect:rectanglePath.bounds]);
+//    NSLog(@"2) rectanglePath.bounds=%@",[NSValue valueWithCGRect:rectanglePath.bounds]);
     
     return rectanglePath;
 }
@@ -923,7 +923,7 @@ CGFloat radiansToDegrees3(CGFloat radians) {return radians * 180 / M_PI;};
             zoomRect = hittestRect;
         }
         
-        NSLog(@"zoomRect=%@",[NSValue valueWithCGRect:zoomRect]);
+//        NSLog(@"zoomRect=%@",[NSValue valueWithCGRect:zoomRect]);
         [self.scrollView zoomToRect:zoomRect animated:NO];
         [self.scrollView setContentOffset:CGPointMake(
                                                       (CGRectGetWidth(self.zoomingView.frame) - CGRectGetWidth(self.scrollView.frame)) * .5f
@@ -1040,8 +1040,8 @@ CGFloat radiansToDegrees3(CGFloat radians) {return radians * 180 / M_PI;};
                 CGRect maskRect = [self convertRect:cropRect toView:self.imageView];
                 CGRect zooomViewRect = self.imageView.frame;
                 
-                NSLog(@"maskRect=%@",[NSValue valueWithCGRect:maskRect]);
-                NSLog(@"zooomViewRect=%@",[NSValue valueWithCGRect:zooomViewRect]);
+//                NSLog(@"maskRect=%@",[NSValue valueWithCGRect:maskRect]);
+//                NSLog(@"zooomViewRect=%@",[NSValue valueWithCGRect:zooomViewRect]);
                 
                 if( maskRect.origin.x < .0){
                     contentOffset.x -= maskRect.origin.x * self.scrollView.zoomScale;

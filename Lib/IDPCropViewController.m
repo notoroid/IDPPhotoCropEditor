@@ -46,23 +46,6 @@ CGFloat radiansToDegrees(CGFloat radians) {return radians * 180 / M_PI;};
 
 @implementation IDPCropViewController
 
-//+ (NSBundle *)bundle
-//{
-//    static NSBundle *bundle = nil;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        NSURL *bundleURL = [[NSBundle mainBundle] URLForResource:@"PEPhotoCropEditor" withExtension:@"bundle"];
-//        bundle = [[NSBundle alloc] initWithURL:bundleURL];
-//    });
-//    
-//    return bundle;
-//}
-
-//static inline NSString *PELocalizedString(NSString *key, NSString *comment)
-//{
-//    return [[IDPCropViewController bundle] localizedStringForKey:key value:nil table:@"Localizable"];
-//}
-
 - (void)loadView
 {
     UIView *contentView = [[UIView alloc] init];
@@ -171,11 +154,11 @@ CGFloat radiansToDegrees(CGFloat radians) {return radians * 180 / M_PI;};
             s_imageRatio4to3Button = [IDPCropFigureRenderer createImageWithFigureType:IDPCropFigureRendererTypeMonoRatio4to3Button options:nil];
         });
         
-        UIBarButtonItem *button3to4 = [[UIBarButtonItem alloc] initWithImage:s_imageRatio3to4Button style:UIBarButtonItemStyleBordered target:self action:@selector(fired3To4:)];
+        UIBarButtonItem *button3to4 = [[UIBarButtonItem alloc] initWithImage:s_imageRatio3to4Button style:UIBarButtonItemStylePlain target:self action:@selector(fired3To4:)];
         
-        UIBarButtonItem *buttonSquare = [[UIBarButtonItem alloc] initWithImage:s_imageSquareButton style:UIBarButtonItemStyleBordered target:self action:@selector(firedSquare:)];
+        UIBarButtonItem *buttonSquare = [[UIBarButtonItem alloc] initWithImage:s_imageSquareButton style:UIBarButtonItemStylePlain target:self action:@selector(firedSquare:)];
 
-        UIBarButtonItem *button4to3 = [[UIBarButtonItem alloc] initWithImage:s_imageRatio4to3Button style:UIBarButtonItemStyleBordered target:self action:@selector(fired4To3:)];
+        UIBarButtonItem *button4to3 = [[UIBarButtonItem alloc] initWithImage:s_imageRatio4to3Button style:UIBarButtonItemStylePlain target:self action:@selector(fired4To3:)];
         
         self.toolbarItems = @[flexibleSpace,button3to4,buttonSquare,button4to3,flexibleSpace];
     }else{
@@ -194,7 +177,7 @@ CGFloat radiansToDegrees(CGFloat radians) {return radians * 180 / M_PI;};
                                                                                 action:nil];
     
     UIImage *rorate90degreeImage = [IDPCropFigureRenderer createImageWithFigureType:IDPCropFigureRendererTypeMonoRotate90degreeButton options:nil];
-    UIBarButtonItem* rorate90degreeButtotn = [[UIBarButtonItem alloc] initWithImage:rorate90degreeImage style:UIBarButtonItemStyleBordered target:self action:@selector(firedRotate90degree:)];
+    UIBarButtonItem* rorate90degreeButtotn = [[UIBarButtonItem alloc] initWithImage:rorate90degreeImage style:UIBarButtonItemStylePlain target:self action:@selector(firedRotate90degree:)];
     
     // 角度情報表示用UIを作成する
     UIView* viewDegreeInfomation = [[UIView alloc] initWithFrame:CGRectMake(.0f, .0f, 71.0f, 31.0f)];
@@ -235,7 +218,7 @@ CGFloat radiansToDegrees(CGFloat radians) {return radians * 180 / M_PI;};
 
 - (void) fired3To4:(id)sender
 {
-    NSLog(@"cropData=%@",self.cropData );
+//    NSLog(@"cropData=%@",self.cropData );
     
     IDPCropViewCenteringStatus centeringStatus = [self.cropView centeringStatus];
     [self setCropAspectRatio:3.0f / 4.0f centeringStatus:centeringStatus];
@@ -243,7 +226,7 @@ CGFloat radiansToDegrees(CGFloat radians) {return radians * 180 / M_PI;};
 
 - (void) firedSquare:(id)sender
 {
-    NSLog(@"cropData=%@",self.cropData );
+//    NSLog(@"cropData=%@",self.cropData );
     
     IDPCropViewCenteringStatus centeringStatus = [self.cropView centeringStatus];
     [self setCropAspectRatio:1.0f / 1.0f centeringStatus:centeringStatus];
@@ -251,7 +234,7 @@ CGFloat radiansToDegrees(CGFloat radians) {return radians * 180 / M_PI;};
 
 - (void) fired4To3:(id)sender
 {
-    NSLog(@"cropData=%@",self.cropData );
+//    NSLog(@"cropData=%@",self.cropData );
     
     IDPCropViewCenteringStatus centeringStatus = [self.cropView centeringStatus];
     [self setCropAspectRatio:4.0f / 3.0f centeringStatus:centeringStatus];
@@ -347,19 +330,6 @@ CGFloat radiansToDegrees(CGFloat radians) {return radians * 180 / M_PI;};
         }
     }
 }
-
--(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if( alertView.tag == COPR_VIEW_ALERT_NETWOTK_FAILURE_TAG ){
-        if( buttonIndex != 0 ){
-            if ([self.delegate respondsToSelector:@selector(cropViewController:didFinishCroppingImage:cropData:)]) {
-                NSDictionary* cropData = self.cropView.cropData;
-                [self.delegate cropViewController:self didFinishCroppingImage:self.cropView.croppedImage cropData:cropData];
-            }
-        }
-    }
-}
-
 
 - (void)setKeepingCropAspectRatio:(BOOL)keepingCropAspectRatio
 {

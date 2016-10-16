@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 Irimasu Densan Planning. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define IDP_CROP_CROPAREA_FRAME_NAME @"frame"
 #define IDP_CROP_CROPAREA_ASPECT_RAOTO_NAME @"cropAspectRatio"

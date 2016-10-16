@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kXX-k2-viy">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Psc-JM-HZR">
+            <objects>
+                <navigationController definesPresentationContext="YES" toolbarHidden="NO" id="kXX-k2-viy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sNz-dt-g4a">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3Nj-zd-v8O">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="mvy-Lt-UOe" kind="relationship" relationship="rootViewController" id="bgj-0j-3Fb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tq-lz-fuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="-107"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0uJ-eJ-c0G">
+            <objects>
+                <viewController id="mvy-Lt-UOe" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9X3-4p-uJL"/>
+                        <viewControllerLayoutGuide type="bottom" id="CSU-Gp-3HS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZDO-uO-9ZT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C3o-HQ-iHt">
+                                <frame key="frameInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.89999997620000005" green="0.89999997620000005" blue="0.89999997620000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="傾き調整" id="dSL-Qo-ISh">
+                            <connections>
+                                <action selector="adjustAngle:" destination="mvy-Lt-UOe" id="cG9-br-GPa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="hpR-iB-CHo"/>
+                        <barButtonItem systemItem="camera" id="XrW-Cj-J6K">
+                            <connections>
+                                <action selector="cameraButtonAction:" destination="mvy-Lt-UOe" id="dzg-G1-D2C"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="CMH-sP-Yej">
+                        <barButtonItem key="rightBarButtonItem" title="切り抜き直し" id="KnY-Iw-WRQ">
+                            <connections>
+                                <action selector="openEditor:" destination="mvy-Lt-UOe" id="38R-Lm-z5b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="adjustAngleButton" destination="dSL-Qo-ISh" id="Rpl-7i-Jcf"/>
+                        <outlet property="cameraButton" destination="XrW-Cj-J6K" id="QiO-zg-oZs"/>
+                        <outlet property="editButton" destination="KnY-Iw-WRQ" id="w4g-gO-JSh"/>
+                        <outlet property="imageView" destination="C3o-HQ-iHt" id="zBO-hH-zoH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2U-YW-h2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56" y="-108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uln-le-BJa">
+            <objects>
+                <navigationController storyboardIdentifier="cropViewController" definesPresentationContext="YES" id="u9l-Xq-Ymj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HJ7-Ua-5V1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZxH-0B-Smg" kind="relationship" relationship="rootViewController" id="R52-aI-602"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3s-sE-6iL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453" y="677"/>
+        </scene>
+        <!--Crop View Controller-->
+        <scene sceneID="Z6h-CT-lLp">
+            <objects>
+                <viewController id="ZxH-0B-Smg" customClass="IDPCropViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GfZ-MM-OLu"/>
+                        <viewControllerLayoutGuide type="bottom" id="1FS-4y-jsP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="slr-Bm-OE0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mur-gx-Ygf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p4H-a6-ajc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56" y="677"/>
+        </scene>
+    </scenes>
+</document>
