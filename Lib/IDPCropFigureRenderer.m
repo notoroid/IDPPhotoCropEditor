@@ -58,16 +58,10 @@
                         UIBezierPath* bezierLinePath = [UIBezierPath bezierPath];
                         [bezierLinePath moveToPoint: CGPointMake(CGRectGetMinX(cropRect),CGRectGetMinY(cropRect) + height / 3 * i)];
                         [bezierLinePath addLineToPoint: CGPointMake(CGRectGetMaxX(cropRect),CGRectGetMinY(cropRect)+ height / 3 * i)];
-//                        [colorLine2 setStroke];
-//                        bezierLinePath.lineWidth = 1.5f;
-//                        [bezierLinePath stroke];
                         
                         UIBezierPath* bezierLine2Path = [UIBezierPath bezierPath];
                         [bezierLine2Path moveToPoint: CGPointMake(CGRectGetMinX(cropRect) + width / 3 * i,CGRectGetMinY(cropRect))];
                         [bezierLine2Path addLineToPoint: CGPointMake(CGRectGetMinX(cropRect)+ width / 3 * i,CGRectGetMaxY(cropRect))];
-//                        [colorLine2 setStroke];
-//                        bezierLine2Path.lineWidth = 1.5f;
-//                        [bezierLine2Path stroke];
                         
                         UIBezierPath *bezierMargePath =[UIBezierPath bezierPath];
                         [bezierMargePath appendPath:bezierLinePath];
@@ -84,16 +78,10 @@
                         UIBezierPath* bezier2Path = [UIBezierPath bezierPath];
                         [bezier2Path moveToPoint: CGPointMake(CGRectGetMinX(cropRect),CGRectGetMinY(cropRect) + height / 3 * i)];
                         [bezier2Path addLineToPoint: CGPointMake(CGRectGetMaxX(cropRect),CGRectGetMinY(cropRect)+ height / 3 * i)];
-//                        [color3 setStroke];
-//                        bezier2Path.lineWidth = 1;
-//                        [bezier2Path stroke];
                         
                         UIBezierPath* bezier4Path = [UIBezierPath bezierPath];
                         [bezier4Path moveToPoint: CGPointMake(CGRectGetMinX(cropRect) + width / 3 * i,CGRectGetMinY(cropRect))];
                         [bezier4Path addLineToPoint: CGPointMake(CGRectGetMinX(cropRect)+ width / 3 * i,CGRectGetMaxY(cropRect))];
-//                        [color3 setStroke];
-//                        bezier4Path.lineWidth = 1;
-//                        [bezier4Path stroke];
                         
                         UIBezierPath *bezierMargePath =[UIBezierPath bezierPath];
                         [bezierMargePath appendPath:bezier2Path];
