@@ -27,6 +27,8 @@
 		14BB4F0C174BD7B100C75F78 /* IDPCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4F0B174BD7B100C75F78 /* IDPCropViewController.m */; };
 		14BB4F11174BD7CC00C75F78 /* IDPCropRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4F0E174BD7CA00C75F78 /* IDPCropRectView.m */; };
 		14BB4F12174BD7CC00C75F78 /* IDPResizeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BB4F10174BD7CB00C75F78 /* IDPResizeControl.m */; };
+		8731657B1DB3D36C001CA99D /* IDPCropFigureRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 873165761DB3D36C001CA99D /* IDPCropFigureRenderer.m */; };
+		8731657C1DB3D36C001CA99D /* IDPTrackerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 873165781DB3D36C001CA99D /* IDPTrackerView.m */; };
 		E576407617A7889200111967 /* UIImage+IDPCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = E576407417A7889200111967 /* UIImage+IDPCrop.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,11 @@
 		14BB4F0E174BD7CA00C75F78 /* IDPCropRectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDPCropRectView.m; path = Lib/IDPCropRectView.m; sourceTree = SOURCE_ROOT; };
 		14BB4F0F174BD7CB00C75F78 /* IDPResizeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDPResizeControl.h; path = Lib/IDPResizeControl.h; sourceTree = SOURCE_ROOT; };
 		14BB4F10174BD7CB00C75F78 /* IDPResizeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDPResizeControl.m; path = Lib/IDPResizeControl.m; sourceTree = SOURCE_ROOT; };
+		873165741DB3D36C001CA99D /* IDPPhotoCropEditorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDPPhotoCropEditorConstants.h; path = Lib/IDPPhotoCropEditorConstants.h; sourceTree = SOURCE_ROOT; };
+		873165751DB3D36C001CA99D /* IDPCropFigureRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDPCropFigureRenderer.h; path = Lib/IDPCropFigureRenderer.h; sourceTree = SOURCE_ROOT; };
+		873165761DB3D36C001CA99D /* IDPCropFigureRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDPCropFigureRenderer.m; path = Lib/IDPCropFigureRenderer.m; sourceTree = SOURCE_ROOT; };
+		873165771DB3D36C001CA99D /* IDPTrackerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDPTrackerView.h; path = Lib/IDPTrackerView.h; sourceTree = SOURCE_ROOT; };
+		873165781DB3D36C001CA99D /* IDPTrackerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDPTrackerView.m; path = Lib/IDPTrackerView.m; sourceTree = SOURCE_ROOT; };
 		E576407417A7889200111967 /* UIImage+IDPCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+IDPCrop.m"; path = "Lib/UIImage+IDPCrop.m"; sourceTree = SOURCE_ROOT; };
 		E576407517A7889200111967 /* UIImage+IDPCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+IDPCrop.h"; path = "Lib/UIImage+IDPCrop.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -179,6 +186,11 @@
 				14BB4F10174BD7CB00C75F78 /* IDPResizeControl.m */,
 				E576407517A7889200111967 /* UIImage+IDPCrop.h */,
 				E576407417A7889200111967 /* UIImage+IDPCrop.m */,
+				873165741DB3D36C001CA99D /* IDPPhotoCropEditorConstants.h */,
+				873165751DB3D36C001CA99D /* IDPCropFigureRenderer.h */,
+				873165761DB3D36C001CA99D /* IDPCropFigureRenderer.m */,
+				873165771DB3D36C001CA99D /* IDPTrackerView.h */,
+				873165781DB3D36C001CA99D /* IDPTrackerView.m */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -259,7 +271,9 @@
 				14BB4EDF174BC5D300C75F78 /* ViewController.m in Sources */,
 				14BB4F09174BD79E00C75F78 /* IDPCropView.m in Sources */,
 				14BB4F0C174BD7B100C75F78 /* IDPCropViewController.m in Sources */,
+				8731657C1DB3D36C001CA99D /* IDPTrackerView.m in Sources */,
 				14BB4F11174BD7CC00C75F78 /* IDPCropRectView.m in Sources */,
+				8731657B1DB3D36C001CA99D /* IDPCropFigureRenderer.m in Sources */,
 				14BB4F12174BD7CC00C75F78 /* IDPResizeControl.m in Sources */,
 				E576407617A7889200111967 /* UIImage+IDPCrop.m in Sources */,
 			);
@@ -365,6 +379,7 @@
 		14BB4EAD174BC39000C75F78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/PEPhotoCropEditor-Prefix.pch";
 				INFOPLIST_FILE = "DemoApp/PEPhotoCropEditor-Info.plist";
@@ -376,6 +391,7 @@
 		14BB4EAE174BC39000C75F78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoApp/PEPhotoCropEditor-Prefix.pch";
 				INFOPLIST_FILE = "DemoApp/PEPhotoCropEditor-Info.plist";

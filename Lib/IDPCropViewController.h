@@ -7,38 +7,49 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol IDPCropViewControllerDelegate;
+#import "IDPPhotoCropEditorConstants.h"
 
 @interface IDPCropViewController : UIViewController
 
-@property (nonatomic, weak) id<IDPCropViewControllerDelegate> delegate;
+@property (nonatomic, weak) id delegate;
 @property (nonatomic) UIImage *image;
+
+@property (assign,nonatomic) IDPCropViewEditMode editMode;
+@property (assign,nonatomic) BOOL toolBarHidden;
+@property (assign,nonatomic) UIEdgeInsets edgeInsets;
+@property (assign,nonatomic) IDPCropViewFrameType frameType;
+- (void) setFrameType:(IDPCropViewFrameType)frameType animated:(BOOL)animated;
+@property (strong,nonatomic) UIColor *overlayColor; // オーバーレイの色
+@property (strong,nonatomic) UIColor *backgroundColor; //背景色の色
+@property (strong,nonatomic) UIBarButtonItem *cancelButton;
+@property (strong,nonatomic) UIBarButtonItem *doneButton;
 
 @property (nonatomic) BOOL keepingCropAspectRatio;
 @property (nonatomic) CGFloat cropAspectRatio;
+- (void)setCropAspectRatio:(CGFloat)cropAspectRatio centeringStatus:(IDPCropViewCenteringStatus)centeringStatus;
+- (IDPCropViewCenteringStatus) centeringStatus; // 中央寄せの状態
+
+@property (assign,nonatomic) CGFloat rotationAngle;
+@property (readonly,nonatomic) CGFloat baseDegree;
+- (void) resetRotate;
+- (void) rotate90degree;
 
 @property (nonatomic) CGRect cropRect;
-@property (nonatomic) CGRect imageCropRect;
+@property (nonatomic) NSDictionary* cropData;
 
-@property (nonatomic) BOOL toolbarHidden;
+- (void)cancel:(id)sender;
+- (void)done:(id)sender;
 
-@property (nonatomic, assign, getter = isRotationEnabled) BOOL rotationEnabled;
+- (UIImage *) createCroppedImage;
 
-@property (nonatomic, readonly) CGAffineTransform rotationTransform;
-
-@property (nonatomic, readonly) CGRect zoomedCropRect;
-
-
-- (void)resetCropRect;
-- (void)resetCropRectAnimated:(BOOL)animated;
+#pragma mark - Utility method
+- (NSArray *) degreeToolbarItemsWithAppendButton:(UIBarButtonItem *)appendButton style:(IDPDegreeAdjustmentToolbarStyle)style;
 
 @end
 
 @protocol IDPCropViewControllerDelegate <NSObject>
-@optional
-- (void)cropViewController:(IDPCropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage;
-- (void)cropViewController:(IDPCropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage transform:(CGAffineTransform)transform cropRect:(CGRect)cropRect;
+- (void)cropViewController:(IDPCropViewController *)controller didFinishCroppingImage:(UIImage *)croppedImage cropData:(NSDictionary*)cropData;
 - (void)cropViewControllerDidCancel:(IDPCropViewController *)controller;
-
+@optional
+- (CGFloat) cropViewControllerStatusBarHeight:(IDPCropViewController *)controller;
 @end

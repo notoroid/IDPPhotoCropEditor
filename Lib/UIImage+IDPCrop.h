@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (PECrop)
+@interface UIImage (IDPCrop)
+
+- (UIImage *)rotatedImageWithtransform:(CGAffineTransform)rotation sideways:(BOOL)sideways
+                         croppedToRect:(CGRect)rect;
 
 - (UIImage *)rotatedImageWithtransform:(CGAffineTransform)rotation
                          croppedToRect:(CGRect)rect;

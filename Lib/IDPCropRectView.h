@@ -8,19 +8,36 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol IDPCropRectViewDelegate;
+typedef NS_ENUM(NSInteger, IDPCropRectViewLockDirection )
+{
+     IDPCropRectViewLockDirectionNeutoral
+    ,IDPCropRectViewLockDirectionHorizontal
+    ,IDPCropRectViewLockDirectionVertical
+};
+
+
+@class IDPResizeControl;
 
 @interface IDPCropRectView : UIView
 
-@property (nonatomic, weak) id<IDPCropRectViewDelegate> delegate;
+@property (nonatomic, weak) id delegate;
 @property (nonatomic) BOOL showsGridMajor;
 @property (nonatomic) BOOL showsGridMinor;
 
 @property (nonatomic) BOOL keepingAspectRatio;
 
+@property (nonatomic) IDPResizeControl *rotateControlView;
+@property (nonatomic) CGFloat verticalRatio;
+@property (nonatomic) CGFloat horizontalRatio;
+@property (nonatomic) IDPCropRectViewLockDirection controlLockDirection;
+@property (nonatomic) CGFloat cropLockMargine;
+
 @end
 
 @protocol IDPCropRectViewDelegate <NSObject>
+
+- (CGRect)cropRectView:(IDPCropRectView *)cropRectView rectForEditingInitialRect:(CGRect)initialRect;
+- (void)cropRectView:(IDPCropRectView *)cropRectView didChangedRotationControlRect:(CGRect)rotationControlRect;
 
 - (void)cropRectViewDidBeginEditing:(IDPCropRectView *)cropRectView;
 - (void)cropRectViewEditingChanged:(IDPCropRectView *)cropRectView;
