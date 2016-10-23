@@ -8,7 +8,6 @@
 #import "UIImage+IDPCrop.h"
 
 @import CoreImage;
-@import ImageIO;
 
 @implementation UIImage (IDPCrop)
 

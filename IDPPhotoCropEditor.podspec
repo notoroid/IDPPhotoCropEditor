@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "IDPPhotoCropEditor"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "IDPPhotoCropEditor is middleware that provides a Instagram-like photo clip function."
 
   s.description  = <<-DESC
@@ -18,10 +18,10 @@ IDPPhotoCropEditor is middleware that provides a Instagram-like photo clip funct
   s.social_media_url   = "http://twitter.com/notoroid"
 
   s.platform     = :ios, "9.0"
-  s.source       = { :git => "https://github.com/notoroid/IDPPhotoCropEditor.git", :tag => "v0.0.1" }
+  s.source       = { :git => "https://github.com/notoroid/IDPPhotoCropEditor.git", :tag => "v#{s.version}" }
 
   s.source_files  = "Lib/**/*.{h,m}"
   s.public_header_files = "Lib/**/*.h"
-
+  s.frameworks = "CoreImage"
   s.requires_arc = true
 end
